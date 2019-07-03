@@ -1,19 +1,81 @@
-const formatTime = date => {
-  const year = date.getFullYear()
-  const month = date.getMonth() + 1
-  const day = date.getDate()
-  const hour = date.getHours()
-  const minute = date.getMinutes()
-  const second = date.getSeconds()
+// const callFunction = (name, data = {}) => {
+//   return new Promise((resolve, reject) => {
+//     wx.cloud.callFunction({
+//       name,
+//       data,
+//       success: res => {
+//         resolve(res);
+//       },
+//       fail: res => {
+//         reject(res);
+//       }
+//     })
+//   })
+// }
 
-  return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')
+/**
+ * 确认是否授权，如果未授权，则发起授权，返回授权结果
+ * @param {String} 权限名称
+ * @returns {Boolean} 授权结果
+ */
+const checkAuth = scope_name => {
+  return new Promise((resolve, reject) => {
+    wx.getSetting({
+      success: (res) => {
+        if (res[scope_name]) {
+          resolve(true);
+        } else {
+          wx.authorize({
+            scope: scope_name,
+            success: res => {
+              resolve(true);
+            },
+            fail: res => {
+              resolve(false);
+            }
+          })
+        }
+      }
+    })
+  })
 }
 
-const formatNumber = n => {
-  n = n.toString()
-  return n[1] ? n : '0' + n
+/**
+ * 通用消息提示
+ * @params {String} message 需要提示的消息
+ */
+const toast = (message) => {
+  wx.showToast({
+    title: message,
+    duration: 1200,
+    mask: true,
+    icon: "none"
+  });
+}
+
+const formatTime = (datetime, fmt = 'yyyy-MM-dd HH:mm:ss') => {
+  var o = {
+    "M+": datetime.getMonth() + 1, //月份   
+    "d+": datetime.getDate(), //日   
+    "H+": datetime.getHours(), //小时   
+    "m+": datetime.getMinutes(), //分   
+    "s+": datetime.getSeconds(), //秒   
+    "q+": Math.floor((datetime.getMonth() + 3) / 3), //季度   
+    "S": datetime.getMilliseconds() //毫秒   
+  };
+  if (/(y+)/.test(fmt)) {
+    fmt = fmt.replace(RegExp.$1, (datetime.getFullYear() + "").substr(4 - RegExp.$1.length));
+  }
+  for (var k in o) {
+    if (new RegExp("(" + k + ")").test(fmt)) {
+      fmt = fmt.replace(RegExp.$1, (RegExp.$1.length === 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+    }
+  }
+  return fmt;
 }
 
 module.exports = {
-  formatTime: formatTime
+  checkAuth,
+  toast,
+  formatTime
 }

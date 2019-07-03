@@ -1,0 +1,59 @@
+/* pages/home/index/index.wxss */
+
+page {
+  width: 100%;
+  height: 100%;
+}
+.search-box {
+  width: 100%;
+  height: 110rpx;
+  padding: 20rpx 40rpx;
+}
+.tab-title {
+  height: 82rpx;
+  line-height: 80rpx;
+  border-bottom: 2rpx solid #ddd;
+}
+
+.tab-item {
+  text-align: center;
+}
+
+.tab-content {
+  flex: 1;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.info {
+  width: 100%;
+  height: 190rpx;
+  padding: 20rpx;
+}
+
+.img {
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.desc {
+  margin-left: 20rpx;
+  font-size: 26rpx;
+  text-indent: 2em;
+}
+
+.tip-title {
+  font-weight: bold;
+  padding-left: 20rpx;
+  font-size: 30rpx;
+  margin-top: 20rpx;
+}
+
+.more {
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+}

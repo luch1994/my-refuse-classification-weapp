@@ -1,0 +1,7 @@
+<!--pages/home/search/index.wxml-->
+<view class="search-box flex-row">
+  <view class="flex1">
+    <m-search placeholder="查查这是什么垃圾"></m-search>
+  </view>
+  <view class="cancel" bindtap="back">取消</view>
+</view>

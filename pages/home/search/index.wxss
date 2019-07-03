@@ -1,0 +1,10 @@
+/* pages/home/search/index.wxss */
+
+.search-box {
+  padding: 20rpx 30rpx;
+  align-items: center;
+}
+
+.cancel {
+  margin-left: 20rpx;
+}

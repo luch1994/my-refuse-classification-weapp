@@ -1,0 +1,24 @@
+/* pages/home/category/detail.wxss */
+
+.info {
+  padding: 30rpx;
+}
+
+.img {
+  width: 150rpx;
+  height: 150rpx;
+  margin: 0 auto;
+}
+
+.desc {
+  margin-top: 10rpx;
+  font-size: 26rpx;
+  text-indent: 2em;
+}
+
+.bottom-grey {
+  height: 100rpx;
+  line-height: 50rpx;
+  color: #999;
+  text-align: center;
+}

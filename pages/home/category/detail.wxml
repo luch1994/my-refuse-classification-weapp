@@ -1,0 +1,9 @@
+<!--pages/home/category/detail.wxml-->
+<view class="info" style="background-color: {{bgColor}};">
+  <view>
+    <image mode="aspectFit" src="/images/icon-{{rabish.enName}}-waste.png" class="img"></image>
+  </view>
+  <text class="desc" style="color: {{rabish.color}};">{{rabish.desc}}</text>
+</view>
+<view class="rabish-item" wx:for="{{rabish.data}}" wx:key="{{index}}">{{item.n}}</view>
+<view class="bottom-grey">到底啦</view>
