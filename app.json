@@ -1,14 +1,40 @@
 {
   "pages": [
-    "pages/home/index/index",
-    "pages/home/search/index",
-    "pages/home/category/detail"
+    "pages/index/index",
+    "pages/search/index",
+    "pages/trash/index",
+    "pages/exercise/index",
+    "pages/share/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "垃圾类别查询",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#333333",
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/icon-home.png",
+        "selectedIconPath": "/images/icon-home-theme.png"
+      },
+      {
+        "pagePath": "pages/exercise/index",
+        "text": "练习",
+        "iconPath": "/images/icon-exercise.png",
+        "selectedIconPath": "/images/icon-exercise-theme.png"
+      },
+      {
+        "pagePath": "pages/share/index",
+        "text": "分享",
+        "iconPath": "/images/icon-share.png",
+        "selectedIconPath": "/images/icon-share-theme.png"
+      }
+    ]
   },
   "sitemapLocation": "sitemap.json"
 }

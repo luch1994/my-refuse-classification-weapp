@@ -1,15 +1,10 @@
-// pages/home/index/index.js
-const {
-  rabishData
-} = require('../../../data/data.js');
+// pages/home/search/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    rabishData: null,
-    curIndex: 0,
     listHeight: 0
   },
 
@@ -17,9 +12,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    this.setData({
-      rabishData
-    });
+
   },
 
   /**
@@ -27,7 +20,7 @@ Page({
    */
   onReady: function() {
     let query = wx.createSelectorQuery();
-    query.select('#tabContent').boundingClientRect(res => {
+    query.select('#list').boundingClientRect(res => {
       console.log(res);
       this.setData({
         listHeight: res.height
@@ -77,33 +70,7 @@ Page({
 
   },
 
-  onSwiperChange: function(e) {
-    // console.log(e);
-    let index = 0;
-    if (e.type == 'tap') {
-      index = e.currentTarget.dataset.index;
-    } else {
-      index = e.detail.current;
-    }
-    if (index === this.data.curIndex) {
-      return;
-    }
-    this.setData({
-      curIndex: index
-    });
-  },
-
-  onViewMore: function(e) {
-    console.log(e);
-    let index = e.currentTarget.dataset.index;
-    wx.navigateTo({
-      url: `../category/detail?index=${index}`
-    });
-  },
-
-  onSearch() {
-    wx.navigateTo({
-      url: '../search/index',
-    })
+  back() {
+    wx.navigateBack({});
   }
 })

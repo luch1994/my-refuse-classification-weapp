@@ -1,5 +1,5 @@
 <view class='box' bindtap="onTap">
   <image class='icon search' src='/images/icon-search.svg' bindtap='search'></image>
-  <input type='text' placeholder='{{placeholder}}' value="{{val}}" bindinput='inputing' placeholder-class='color-e' class='input' bindconfirm='search' read-only="{{readOnly}}"></input>
+  <input type='text' placeholder='{{placeholder}}' value="{{val}}" bindinput='inputing' placeholder-class='color-e' class='input' bindconfirm='search' read-only="{{readOnly}}" disabled="{{disabled}}"></input>
   <image class='icon delete' hidden="{{!isShowDelete}}" src='/images/icon-x.svg' bindtap='clear'></image>
 </view>

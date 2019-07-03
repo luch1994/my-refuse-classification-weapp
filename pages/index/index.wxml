@@ -1,23 +1,23 @@
 <!--pages/home/index/index.wxml-->
 <view class="container flex-col">
   <view class="search-box">
-    <m-search placeholder="查查这是什么垃圾" read-only bind:select="onSearch"></m-search>
+    <m-search placeholder="查查这是什么垃圾" disabled bind:select="onSearch"></m-search>
   </view>
   <view class="tab-title flex-row">
-    <view class="tab-item flex1 {{curIndex == index ? item.enName : ''}}" wx:for="{{rabishData}}" wx:key="{{index}}" data-index="{{index}}" bindtap="onSwiperChange">{{item.name}}</view>
+    <view class="tab-item flex1 {{curIndex == index ? item.enName : ''}}" wx:for="{{trashData}}" wx:key="{{index}}" data-index="{{index}}" bindtap="onSwiperChange">{{item.name}}</view>
   </view>
   <view class="tab-content" id="tabContent">
     <swiper class="swiper" current="{{curIndex}}" bindchange="onSwiperChange">
-      <swiper-item wx:for="{{rabishData}}" wx:key="{{index}}">
+      <swiper-item wx:for="{{trashData}}" wx:key="{{index}}">
         <scroll-view style="height: {{listHeight}}px;" scroll-y>
           <view class="info flex-row">
             <image class="img" src="{{'/images/icon-' + item.enName + '-waste.png'}}"></image>
             <text class="flex1 desc" style="color: {{item.color}}">{{item.desc}}</text>
           </view>
           <view class="tip-title" style="color: {{item.color}};">常见{{item.name}}</view>
-          <view class="rabish-list">
+          <view class="trash-list">
             <block wx:for="{{[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]}}" wx:for-item="r1" wx:for-index="r2" wx:key="{{r1}}">
-              <view class="rabish-item">
+              <view class="trash-item">
                 {{item.data[r1].n}}
               </view>
             </block>

@@ -49,17 +49,17 @@ view {
   color: #fff;
 }
 
-.rabish-item {
+.trash-item {
   height: 80rpx;
   font-size: 26rpx;
   line-height: 80rpx;
   padding-left: 20rpx;
 }
 
-.rabish-item:nth-child(odd) {
+.trash-item:nth-child(odd) {
   background-color: #fff;
 }
 
-.rabish-item:nth-child(even) {
-  background-color: #f2f2f2;
+.trash-item:nth-child(even) {
+  background-color: #f7f7f7;
 }

@@ -1,0 +1,16 @@
+<!--pages/home/search/index.wxml-->
+<view class="container flex-col">
+  <view class="search-box flex-row">
+    <view class="flex1">
+      <m-search placeholder="查查这是什么垃圾"></m-search>
+    </view>
+    <view class="cancel" bindtap="back">取消</view>
+  </view>
+  <view class="flex1" id="list">
+    <scroll-view scroll-y style="height: {{listHeight}}px;">
+      <view class="trash-item">5号电池【干垃圾】</view>
+      <view class="trash-item">7号电池【干垃圾】</view>
+      <view class="trash-item">干电池【干垃圾】</view>
+    </scroll-view>
+  </view>
+</view>

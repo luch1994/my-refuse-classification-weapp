@@ -1,0 +1,29 @@
+<!--pages/exercise/index.wxml-->
+<view class="title">竹签</view>
+<view class="select">
+  <view class="option">
+    <view class="option-img-box">
+      <image src="/images/icon-wet-waste-s.png" class="option-img"></image>
+    </view>
+    <text>湿垃圾</text>
+  </view>
+  <view class="option selected">
+    <view class="option-img-box">
+      <image src="/images/icon-wet-waste-s.png" class="option-img"></image>
+    </view>
+    <text>湿垃圾</text>
+  </view>
+  <view class="option">
+    <view class="option-img-box">
+      <image src="/images/icon-wet-waste-s.png" class="option-img"></image>
+    </view>
+    <text>湿垃圾</text>
+  </view>
+  <view class="option">
+    <view class="option-img-box">
+      <image src="/images/icon-wet-waste-s.png" class="option-img"></image>
+    </view>
+    <text>湿垃圾</text>
+  </view>
+</view>
+<view class="step">1/10</view>
