@@ -83,9 +83,16 @@ const getAllTrashListData = async() => {
   return data;
 }
 
+const getFourTrashListData = async() => {
+  let res = await Promise.all([getTrashListData('trash-0'), getTrashListData('trash-1'), getTrashListData('trash-2'), getTrashListData('trash-3')]);
+  let data = [...res[0], ...res[1], ...res[2], ...res[3]];
+  return data;
+}
+
 module.exports = {
   getSimpleTrashData,
   getTrashListData,
   getAllTrashCategory,
-  getAllTrashListData
+  getAllTrashListData,
+  getFourTrashListData
 }

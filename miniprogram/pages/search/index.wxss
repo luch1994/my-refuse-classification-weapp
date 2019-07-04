@@ -11,5 +11,6 @@ page {
 }
 
 .cancel {
-  margin-left: 20rpx;
+  margin-left: 30rpx;
+  font-size: 32rpx;
 }

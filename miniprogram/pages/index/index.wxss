@@ -15,6 +15,7 @@ page {
   height: 82rpx;
   line-height: 80rpx;
   border-bottom: 2rpx solid #ddd;
+  font-size: 32rpx;
 }
 
 .tab-item {
@@ -52,6 +53,7 @@ page {
   padding-left: 20rpx;
   font-size: 30rpx;
   margin-top: 20rpx;
+  margin-bottom: 20rpx;
 }
 
 .more {

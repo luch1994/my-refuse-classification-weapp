@@ -87,7 +87,6 @@ Page({
 
   onInput(e) {
     let value = e.detail.value;
-    console.log(value);
     if (!value) {
       if (this.data.resultList.length != 0) {
         this.setData({
@@ -101,7 +100,8 @@ Page({
     });
     let categories = this.data.categories;
     let resultList = res1.map(item => {
-      let str = `${item.n}【${categories[item.i - 1]}】`;
+      let c = parseInt(item.c) - 1;
+      let str = `${item.n}【${categories[c]}】`;
       return str;
     });
     this.setData({

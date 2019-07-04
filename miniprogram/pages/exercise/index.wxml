@@ -1,29 +1,11 @@
 <!--pages/exercise/index.wxml-->
-<view class="title">竹签</view>
+<view class="title">{{topics[curIndex].n}}</view>
 <view class="select">
-  <view class="option">
-    <view class="option-img-box">
-      <image src="/images/icon-wet-waste-s.png" class="option-img"></image>
+  <view class="option {{index + 1 == topics[curIndex].selected ? 'selected': ''}}" wx:for="{{optionlist}}" wx:key="{{index}}" data-index="{{index + 1}}" bindtap="onSelect">
+    <view class="option-img-box" style="background-color: {{item.color}};">
+      <image src="{{item.icon}}" class="option-img"></image>
     </view>
-    <text>湿垃圾</text>
-  </view>
-  <view class="option selected">
-    <view class="option-img-box">
-      <image src="/images/icon-wet-waste-s.png" class="option-img"></image>
-    </view>
-    <text>湿垃圾</text>
-  </view>
-  <view class="option">
-    <view class="option-img-box">
-      <image src="/images/icon-wet-waste-s.png" class="option-img"></image>
-    </view>
-    <text>湿垃圾</text>
-  </view>
-  <view class="option">
-    <view class="option-img-box">
-      <image src="/images/icon-wet-waste-s.png" class="option-img"></image>
-    </view>
-    <text>湿垃圾</text>
+    <text style="color: {{item.color}}">{{item.name}}</text>
   </view>
 </view>
-<view class="step">1/10</view>
+<view class="step">{{curIndex + 1}}/10</view>

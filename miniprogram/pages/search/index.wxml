@@ -8,7 +8,7 @@
   </view>
   <view class="flex1" id="list">
     <scroll-view scroll-y style="height: {{listHeight}}px;">
-      <view class="trash-item" wx:for="{{resultList}}" wx:key="{{index}}"></view>
+      <view class="trash-item" wx:for="{{resultList}}" wx:key="{{index}}">{{item}}</view>
     </scroll-view>
   </view>
 </view>

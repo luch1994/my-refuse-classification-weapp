@@ -8,6 +8,7 @@
   box-sizing: border-box;
   padding: 15rpx 25rpx;
   align-items: center;
+  font-size: 28rpx;
 }
 
 .icon {
