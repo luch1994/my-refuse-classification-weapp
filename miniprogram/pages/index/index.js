@@ -1,7 +1,8 @@
 // pages/home/index/index.js
 const {
-  trashData
-} = require('../../data/data.js');
+  getSimpleTrashData,
+  getTrashListData
+} = require('../../api/data.js');
 Page({
 
   /**
@@ -17,8 +18,24 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    this.setData({
-      trashData
+    getSimpleTrashData().then(simpleTrashData => {
+      this.setData({
+        trashData: simpleTrashData
+      });
+      for (let i = 0; i < simpleTrashData.length; i++) {
+        ((i) => {
+          getTrashListData(simpleTrashData[i]._id).then(data => {
+            let key = `trashData[${i}].data`;
+            let obj = {};
+            obj[key] = data;
+            this.setData(obj);
+            // this.data.trashData[i].data = data;
+            // this.setData({
+            //   trashData: this.data.trashData
+            // });
+          })
+        })(i);
+      }
     });
   },
 
@@ -28,7 +45,6 @@ Page({
   onReady: function() {
     let query = wx.createSelectorQuery();
     query.select('#tabContent').boundingClientRect(res => {
-      console.log(res);
       this.setData({
         listHeight: res.height
       })
@@ -94,10 +110,9 @@ Page({
   },
 
   onViewMore: function(e) {
-    console.log(e);
-    let index = e.currentTarget.dataset.index;
+    let id = e.currentTarget.dataset.id;
     wx.navigateTo({
-      url: `../trash/index?index=${index}`
+      url: `../trash/index?id=${id}`
     });
   },
 

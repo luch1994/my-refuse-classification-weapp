@@ -1,18 +1,30 @@
 // pages/home/search/index.js
+const {
+  getAllTrashCategory,
+  getAllTrashListData
+} = require('../../api/data.js');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    listHeight: 0
+    listHeight: 0,
+    categories: [],
+    trashList: [],
+    resultList: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
+    getAllTrashCategory().then(categories => {
+      this.data.categories = categories;
+    });
+    getAllTrashListData().then(trashList => {
+      this.data.trashList = trashList;
+    });
   },
 
   /**
@@ -21,7 +33,6 @@ Page({
   onReady: function() {
     let query = wx.createSelectorQuery();
     query.select('#list').boundingClientRect(res => {
-      console.log(res);
       this.setData({
         listHeight: res.height
       })
@@ -72,5 +83,30 @@ Page({
 
   back() {
     wx.navigateBack({});
+  },
+
+  onInput(e) {
+    let value = e.detail.value;
+    console.log(value);
+    if (!value) {
+      if (this.data.resultList.length != 0) {
+        this.setData({
+          resultList: []
+        })
+      }
+      return;
+    }
+    let res1 = this.data.trashList.filter(item => {
+      return item.n.indexOf(value) >= 0 || item.i.indexOf(value) >= 0;
+    });
+    let categories = this.data.categories;
+    let resultList = res1.map(item => {
+      let str = `${item.n}【${categories[item.i - 1]}】`;
+      return str;
+    });
+    this.setData({
+      resultList
+    });
+
   }
 })

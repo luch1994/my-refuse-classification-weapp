@@ -59,6 +59,9 @@ Component({
         val: '',
         isShowDelete: false
       });
+      this.triggerEvent('search', {
+        value: ''
+      });
     }
   }
 })
