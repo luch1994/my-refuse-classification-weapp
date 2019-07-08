@@ -74,8 +74,28 @@ const formatTime = (datetime, fmt = 'yyyy-MM-dd HH:mm:ss') => {
   return fmt;
 }
 
+const downLoadFile = (url) => {
+  return new Promise((resolve, reject) => {
+    wx.downloadFile({
+      url,
+      success(res) {
+        if (res.statusCode === 200) {
+          resolve(res.tempFilePath);
+        } else {
+          resolve(false);
+        }
+      },
+      fail: function(res) {
+        console.log(res);
+        resolve(false);
+      }
+    })
+  });
+}
+
 module.exports = {
   checkAuth,
   toast,
-  formatTime
+  formatTime,
+  downLoadFile
 }

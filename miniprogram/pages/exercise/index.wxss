@@ -33,7 +33,7 @@
   height: 100rpx;
   border-radius: 50%;
   overflow: hidden;
-  padding: 20rpx;
+  /* padding: 20rpx; */
 }
 
 .option-img {
@@ -50,4 +50,92 @@
   text-align: center;
   font-size: 36rpx;
   font-weight: bold;
+}
+
+.result-box {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 10;
+  font-weight: 600;
+}
+
+.total-score {
+  text-align: center;
+  font-size: 50rpx;
+  line-height: 60rpx;
+  margin: 30rpx auto;
+}
+
+.result-list {
+  font-size: 25rpx;
+}
+
+.result-item {
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+  height: 60rpx;
+}
+
+.result-item:nth-child(odd) {
+  background-color: #f7f7f7;
+}
+
+.result-item:nth-child(even) {
+  background-color: #fff;
+}
+
+.trash-name {
+  flex: 1;
+}
+
+.trash-type {
+  flex-basis: 140rpx;
+  flex-grow: 0;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.result {
+  flex-basis: 140rpx;
+  flex-grow: 0;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.right-icon {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.result {
+  color: #f76455;
+}
+
+.btns {
+  width: 100%;
+  height: 200rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 30rpx;
+}
+
+.btn {
+  width: 240rpx;
+  height: 82rpx;
+  margin: 0;
+  border-radius: 40rpx;
+  text-align: center;
+  line-height: 80rpx;
+  background-color: #F2F2F2;
+}
+
+.btn.theme {
+  background-color: #1296db;
 }

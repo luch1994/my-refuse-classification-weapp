@@ -1,1 +1,23 @@
 /* pages/share/index.wxss */
+
+page {
+  background-color: #f7f7f7;
+}
+
+.container {
+  align-items: center;
+}
+
+.img {
+  width: 680rpx;
+  border-radius: 10rpx;
+  margin: 40rpx auto;
+}
+
+.btn {
+  width: 300rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  line-height: 80rpx;
+  margin: 0 auto 40rpx auto;
+}

@@ -27,4 +27,5 @@
       </swiper-item>
     </swiper>
   </view>
+  <m-fix-menu></m-fix-menu>
 </view>

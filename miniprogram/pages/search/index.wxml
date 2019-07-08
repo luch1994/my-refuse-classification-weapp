@@ -2,7 +2,7 @@
 <view class="container flex-col">
   <view class="search-box flex-row">
     <view class="flex1">
-      <m-search placeholder="查查这是什么垃圾" bind:input="onInput"></m-search>
+      <m-search placeholder="查查这是什么垃圾" bind:input="onInput" focus></m-search>
     </view>
     <view class="cancel" bindtap="back">取消</view>
   </view>
@@ -11,4 +11,5 @@
       <view class="trash-item" wx:for="{{resultList}}" wx:key="{{index}}">{{item}}</view>
     </scroll-view>
   </view>
+  <m-fix-menu></m-fix-menu>
 </view>

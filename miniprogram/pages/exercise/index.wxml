@@ -9,3 +9,24 @@
   </view>
 </view>
 <view class="step">{{curIndex + 1}}/10</view>
+
+<view class="result-box" hidden="{{!isShowResult}}">
+  <view class="total-score">{{totalScore}}分</view>
+  <view class="result-list">
+    <view class="result-item flex-row" wx:for="{{topics}}" wx:key="{{index}}">
+      <view class="trash-name">{{item.n}}</view>
+      <view class="trash-type">{{optionlist[item.c - 1].name}}</view>
+      <view class="result">
+        <text wx:if="{{item.selected == 0}}">未选择</text>
+        <text wx:elif="{{item.selected != item.c}}">{{optionlist[item.selected - 1].name}}</text>
+        <image wx:else class="right-icon" src="/images/icon-right-theme.svg"></image>
+      </view>
+    </view>
+  </view>
+  <view class="btns">
+    <button class="btn" bindtap="onRestart">再来一次</button>
+    <button class="btn theme" open-type="share">考考别人</button>
+  </view>
+</view>
+
+<m-fix-menu></m-fix-menu>

@@ -1,0 +1,11 @@
+<!--components/m-share/index.wxml-->
+<view class="box" style="right: {{right}}rpx;bottom: {{bottom}}rpx;z-index: {{zIndex}}rpx;">
+  <button class="item" open-type="share">
+    <image class="icon" src="/images/icon-share-oragin.svg"></image>
+    <text class="msg">分享</text>
+  </button>
+  <button class="item" open-type="contact">
+    <image class="icon" src="/images/icon-msg-theme.svg"></image>
+    <text class="msg">留言</text>
+  </button>
+</view>

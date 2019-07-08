@@ -53,6 +53,11 @@ page {
   color: #fff;
 }
 
+.theme {
+  background-color: #1296db;
+  color: #FFF;
+}
+
 .trash-item {
   height: 80rpx;
   font-size: 26rpx;
@@ -66,4 +71,14 @@ page {
 
 .trash-item:nth-child(even) {
   background-color: #fff;
+}
+
+button {
+  padding: 0;
+  border: none;
+}
+
+button::after {
+  width: 0;
+  height: 0;
 }

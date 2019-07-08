@@ -13,7 +13,9 @@ Page({
     list: [],
     topics: [],
     optionlist: [],
-    canSelect: true
+    canSelect: true,
+    totalScore: 0,
+    isShowResult: false
   },
 
   getTenRandom: function(max) {
@@ -64,8 +66,10 @@ Page({
       return item;
     });
     this.setData({
-      topics
+      topics,
+      curIndex: 0
     });
+    this.data.canSelect = true;
   },
 
   /**
@@ -114,23 +118,46 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function() {
-
+    return {
+      title: `测试垃圾分类你能得几分`,
+      path: `/pages/exercise/index`
+    }
   },
+
   onSelect: function(e) {
     if (!this.data.canSelect) {
       return;
     }
     this.data.canSelect = false;
-    let index = e.currentTarget.dataset.index;
+    let selected = parseInt(e.currentTarget.dataset.index);
     let obj = {};
-    let key = `topics[${this.data.curIndex}].selected`;
-    obj[key] = index;
+    let curIndex = this.data.curIndex;
+    let key = `topics[${curIndex}].selected`;
+    obj[key] = selected;
     this.setData(obj);
+    if (this.data.topics[curIndex].c == selected) {
+      this.data.totalScore += 10;
+    }
     setTimeout(() => {
-      this.setData({
-        curIndex: this.data.curIndex + 1
-      });
-      this.data.canSelect = true;
-    }, 600);
+      let newIndex = this.data.curIndex + 1;
+      if (newIndex >= 10) {
+        this.setData({
+          isShowResult: true,
+          totalScore: this.data.totalScore
+        });
+      } else {
+        this.setData({
+          curIndex: newIndex
+        });
+        this.data.canSelect = true;
+      }
+    }, 500);
+  },
+
+  onRestart: function() {
+    this.setData({
+      isShowResult: false
+    })
+    this.loadTopic();
   }
 })

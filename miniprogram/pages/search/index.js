@@ -78,7 +78,9 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function() {
-
+    return {
+      title: `垃圾分类还不会？快来这里查一查`
+    }
   },
 
   back() {
@@ -96,7 +98,7 @@ Page({
       return;
     }
     let res1 = this.data.trashList.filter(item => {
-      return item.n.indexOf(value) >= 0 || item.i.indexOf(value) >= 0;
+      return item.n.indexOf(value) >= 0 || item.i.indexOf(value) >= 0 || item.a.indexOf(value) >= 0;
     });
     let categories = this.data.categories;
     let resultList = res1.map(item => {

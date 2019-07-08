@@ -1,0 +1,30 @@
+/* components/m-share/index.wxss */
+
+.box {
+  position: fixed;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  width: 120rpx;
+  height: 46rpx;
+  align-items: center;
+  padding: 8rpx 16rpx;
+  margin-bottom: 20rpx;
+  border-radius: 26rpx;
+  box-shadow: 0 0 2rpx 2rpx #F1F1F1;
+  background-color: #fff;
+  color: #333;
+  box-sizing: border-box;
+  font-size: 20rpx;
+}
+
+.icon {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.msg {
+  flex: 1;
+}

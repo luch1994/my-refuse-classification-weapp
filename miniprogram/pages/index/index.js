@@ -90,7 +90,9 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function() {
-
+    return {
+      title: `垃圾分类小帮手，分的清清楚楚`
+    }
   },
 
   onSwiperChange: function(e) {

@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "m-fix-menu": "/components/m-fix-menu/index"
+  },
   "navigationBarTitleText": "分享"
 }

@@ -7,3 +7,4 @@
 </view>
 <view class="trash-item" wx:for="{{trash.data}}" wx:key="{{index}}">{{item.n}}</view>
 <view class="bottom-grey">到底啦</view>
+<m-fix-menu></m-fix-menu>

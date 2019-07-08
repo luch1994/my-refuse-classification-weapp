@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "m-search": "/components/m-search/m-search"
+    "m-search": "/components/m-search/m-search",
+    "m-fix-menu": "/components/m-fix-menu/index"
   },
   "navigationBarTitleText": "查询"
 }

@@ -92,8 +92,8 @@ Page({
   onShareAppMessage: function() {
     let r = this.data.trash;
     return {
-      title: `查看所有${r.name}`,
-      path: `/pages/home/category/detail?id=${this.data.id}`
+      title: `看看这些${r.name}你都记住了吗`,
+      path: `/pages/trash/index?id=${this.data.id}`
     }
   }
 })
