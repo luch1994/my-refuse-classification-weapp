@@ -82,3 +82,7 @@ button::after {
   width: 0;
   height: 0;
 }
+
+.bold {
+  font-weight: bold;
+}

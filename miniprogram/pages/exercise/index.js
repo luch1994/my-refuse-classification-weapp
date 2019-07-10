@@ -67,7 +67,8 @@ Page({
     });
     this.setData({
       topics,
-      curIndex: 0
+      curIndex: 0,
+      totalScore: 0
     });
     this.data.canSelect = true;
   },

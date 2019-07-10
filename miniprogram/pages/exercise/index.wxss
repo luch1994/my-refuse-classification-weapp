@@ -100,13 +100,6 @@
   text-align: center;
 }
 
-.result {
-  flex-basis: 140rpx;
-  flex-grow: 0;
-  flex-shrink: 0;
-  text-align: center;
-}
-
 .right-icon {
   width: 30rpx;
   height: 30rpx;
