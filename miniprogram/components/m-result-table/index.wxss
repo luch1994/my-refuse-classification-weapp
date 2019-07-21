@@ -1,0 +1,49 @@
+/* components/m-result-table/index.wxss */
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.result-list {
+  font-size: 25rpx;
+}
+
+.result-item {
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+  height: 60rpx;
+}
+
+.result-item:nth-child(odd) {
+  background-color: #f7f7f7;
+}
+
+.result-item:nth-child(even) {
+  background-color: #fff;
+}
+
+.trash-name {
+  flex: 1;
+}
+
+.trash-type {
+  flex-basis: 140rpx;
+  flex-grow: 0;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.right-icon {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.result {
+  color: #f76455;
+}

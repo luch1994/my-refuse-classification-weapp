@@ -1,4 +1,11 @@
-// pages/exercise/index.js
+// pages/exercise/Competition.js
+const regeneratorRuntime = require('../../utils/runtime.js');
+const {
+  getUser,
+  updateWXInfo,
+  updateCountInfo
+} = require('../../api/user.js');
+
 const {
   getSimpleTrashData,
   getFourTrashListData
@@ -8,12 +15,20 @@ const {
   getTenRandom
 } = require('../../utils/util.js');
 
+const MAX_COUNT = 2;
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    user: null,
+    hasUserInfo: false,
+    leftCount: 0,
+    rankingIndex: '',
+    isShowMyInfo: true,
+    canStart: true,
     curIndex: 0,
     list: [],
     topics: [],
@@ -26,7 +41,19 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {
+  onLoad: async function(options) {
+    let user = await getUser();
+    let hasUserInfo = false;
+    if (user.headImg && user.nickName) {
+      hasUserInfo = true;
+    }
+    let leftCount = MAX_COUNT - user.todayAnswerCount;
+    this.setData({
+      user,
+      hasUserInfo,
+      leftCount
+    });
+
     Promise.all([getSimpleTrashData(), getFourTrashListData()]).then(res => {
       let optionlist = res[0].map(item => {
         let obj = {
@@ -40,27 +67,7 @@ Page({
         optionlist
       });
       this.data.list = res[1];
-      this.loadTopic();
     });
-  },
-
-  loadTopic: function() {
-    let list = this.data.list;
-    let arr = getTenRandom(list.length);
-    let topics = [];
-    for (let a of arr) {
-      topics.push(list[a]);
-    }
-    topics = topics.map(item => {
-      item.selected = 0;
-      return item;
-    });
-    this.setData({
-      topics,
-      curIndex: 0,
-      totalScore: 0
-    });
-    this.data.canSelect = true;
   },
 
   /**
@@ -109,10 +116,41 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function() {
-    return {
-      title: `测试垃圾分类你能得几分`,
-      path: `/pages/exercise/index`
+
+  },
+
+  onGetUserInfo: async function(e) {
+    console.log(e);
+    let {
+      avatarUrl,
+      nickName
+    } = e.detail.userInfo;
+    let updateRes = await updateWXInfo(this.data.user._id, avatarUrl, nickName);
+    this.setData({
+      'user.headImg': avatarUrl,
+      'user.nickName': nickName,
+      hasUserInfo: true
+    });
+  },
+
+  onStart: function(e) {
+    if (!this.data.canStart) {
+      return;
     }
+    if (this.data.leftCount <= 0) {
+      return;
+    }
+    if (!this.data.list || this.data.list.length == 0) {
+      return;
+    }
+    this.data.canStart = false;
+    this._loadTopic();
+    if (this.data.isShowMyInfo) {
+      this.setData({
+        isShowMyInfo: false
+      });
+    }
+    this.data.canStart = true;
   },
 
   onSelect: function(e) {
@@ -132,23 +170,48 @@ Page({
     setTimeout(() => {
       let newIndex = this.data.curIndex + 1;
       if (newIndex >= 10) {
+        let user = this.data.user;
+        // user.answeredTotalCount += 10;
+        // user.correctTotalCount += this.data.totalScore / 10;
+        // user.todayAnswerCount += 1;
+        // user.lastAnswerTime = new Date().getTime();
+        updateCountInfo(user._id, 10, this.data.totalScore / 10);
         this.setData({
           isShowResult: true,
-          totalScore: this.data.totalScore
+          totalScore: this.data.totalScore,
+          user,
+          leftCount: this.data.leftCount - 1
         });
       } else {
         this.setData({
           curIndex: newIndex
         });
-        this.data.canSelect = true;
       }
+      this.data.canSelect = true;
     }, 500);
-  },
 
+  },
+  _loadTopic: function() {
+    let list = this.data.list;
+    let arr = getTenRandom(list.length);
+    let topics = [];
+    for (let a of arr) {
+      topics.push(list[a]);
+    }
+    topics = topics.map(item => {
+      item.selected = 0;
+      return item;
+    });
+    this.setData({
+      topics,
+      curIndex: 0,
+      totalScore: 0
+    });
+  },
   onRestart: function() {
     this.setData({
+      isShowMyInfo: true,
       isShowResult: false
     })
-    this.loadTopic();
   }
 })

@@ -1,0 +1,9 @@
+<!--pages/components/paopao/index.wxml-->
+<form class="box" style="left: {{left}}rpx;top: {{top}}rpx;animation-duration: {{d}}s;" bindsubmit="onSubmit">
+  <button form-type="submit" class="paopao" style="width: {{size}}rpx;height: {{size}}rpx;font-size: {{fontSize}}rpx;{{customStyle}}">
+    <text>
+      <slot></slot>
+    </text>
+  </button>
+  <text class="txt" style="font-size: {{fontSize / 1.5}}rpx;">{{text}}</text>
+</form>

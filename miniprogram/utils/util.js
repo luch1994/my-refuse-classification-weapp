@@ -1,17 +1,17 @@
-// const callFunction = (name, data = {}) => {
-//   return new Promise((resolve, reject) => {
-//     wx.cloud.callFunction({
-//       name,
-//       data,
-//       success: res => {
-//         resolve(res);
-//       },
-//       fail: res => {
-//         reject(res);
-//       }
-//     })
-//   })
-// }
+const callFunction = (name, data = {}) => {
+  return new Promise((resolve, reject) => {
+    wx.cloud.callFunction({
+      name,
+      data,
+      success: res => {
+        resolve(res);
+      },
+      fail: res => {
+        reject(res);
+      }
+    })
+  })
+}
 
 /**
  * 确认是否授权，如果未授权，则发起授权，返回授权结果
@@ -93,9 +93,25 @@ const downLoadFile = (url) => {
   });
 }
 
+const getTenRandom = function(max) {
+  let arr = [];
+  let a = parseInt(Math.random() * max);
+  arr.push(a);
+  for (let i = 0; i < 9; i++) {
+    a = parseInt(Math.random() * max);
+    while (arr.includes(a)) {
+      a = parseInt(Math.random() * max);
+    }
+    arr.push(a);
+  }
+  return arr;
+}
+
 module.exports = {
+  callFunction,
   checkAuth,
   toast,
   formatTime,
-  downLoadFile
+  downLoadFile,
+  getTenRandom
 }

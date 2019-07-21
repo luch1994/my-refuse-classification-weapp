@@ -16,7 +16,8 @@
 			"ignore": [],
 			"disablePlugins": [],
 			"outputPath": ""
-		}
+		},
+		"enhance": true
 	},
 	"appid": "wx5c571ef8fa00ca91",
 	"projectname": "my-refuse-classification-weapp",

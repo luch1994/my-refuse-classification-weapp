@@ -4,6 +4,7 @@
     "pages/search/index",
     "pages/trash/index",
     "pages/exercise/index",
+    "pages/exercise/competition",
     "pages/share/index"
   ],
   "window": {

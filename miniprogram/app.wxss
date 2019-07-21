@@ -49,7 +49,8 @@ page {
 }
 
 .hazardous {
-  background-color: #e53122;
+  /* background-color: #e53122; */
+  background-color: #AC2D2E;
   color: #fff;
 }
 
@@ -75,6 +76,7 @@ page {
 
 button {
   padding: 0;
+  margin: 0;
   border: none;
 }
 
@@ -85,4 +87,14 @@ button::after {
 
 .bold {
   font-weight: bold;
+}
+
+.cover {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  background-color: #FFF;
 }

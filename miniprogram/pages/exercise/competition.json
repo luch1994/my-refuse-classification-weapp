@@ -2,5 +2,5 @@
   "usingComponents": {
     "m-result-table": "/components/m-result-table/index"
   },
-  "navigationBarTitleText": "随堂练习"
+  "navigationBarTitleText": "答题比赛"
 }

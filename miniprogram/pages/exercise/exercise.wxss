@@ -1,0 +1,95 @@
+.title {
+  text-align: center;
+  font-size: 50rpx;
+  font-weight: bold;
+  margin-top: 40rpx;
+}
+
+.select {
+  width: 450rpx;
+  height: 490rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 40rpx auto;
+}
+
+.option {
+  display: flex;
+  flex-direction: column;
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 8rpx;
+  border: 2rpx solid #ddd;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.option-img-box {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  /* padding: 20rpx; */
+}
+
+.option-img {
+  width: 100%;
+  height: 100%;
+}
+
+.option.selected {
+  border-color: #1296db;
+  background-color: rgba(18, 150, 219, 0.2);
+}
+
+.step {
+  text-align: center;
+  font-size: 36rpx;
+  font-weight: bold;
+}
+
+.total-score {
+  text-align: center;
+  font-size: 50rpx;
+  line-height: 60rpx;
+  margin: 30rpx auto;
+}
+
+.result-box {
+  transform: translateX(0);
+  transition: transform 0.3s linear;
+}
+
+.result-box.hidden {
+  transform: translateX(100%);
+}
+
+.btns {
+  width: 100%;
+  height: 200rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btns::before, .btns::after {
+  content: '';
+  display: block;
+}
+
+.btn {
+  width: 8em;
+  height: 2.733em;
+  margin: 0;
+  border-radius: 1.333em;
+  text-align: center;
+  line-height: 2.667em;
+  background-color: #f2f2f2;
+}
+
+.btn.theme {
+  background-color: #1296db;
+}

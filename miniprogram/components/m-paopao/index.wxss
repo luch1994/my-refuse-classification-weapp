@@ -1,0 +1,47 @@
+/* pages/components/paopao/index.wxss */
+
+.box {
+  position: absolute;
+  animation-name: downandup;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.paopao {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  opacity: 0.5;
+  box-shadow: 0 0 0 0.1em #fff inset, 0 0 1em #fff inset; /* 0cf*/
+  box-sizing: border-box;
+  border-radius: 50%;
+  color: #1296db;
+  padding: 0;
+}
+
+.paopao::after {
+  width: 0;
+  height: 0;
+}
+
+.txt {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 10rpx;
+  color: #1296db;
+}
+
+@keyframes downandup {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
