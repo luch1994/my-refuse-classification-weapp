@@ -9,6 +9,9 @@
   <view class="flex1" id="list">
     <scroll-view scroll-y style="height: {{listHeight}}px;">
       <view class="trash-item" wx:for="{{resultList}}" wx:key="{{index}}">{{item}}</view>
+      <block wx:if="{{isShowEmpty}}">
+        <view class="search-empty">没有找到您的结果</view>
+      </block>
     </scroll-view>
   </view>
   <m-fix-menu></m-fix-menu>

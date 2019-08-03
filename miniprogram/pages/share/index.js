@@ -11,7 +11,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    srcs: ['https://636c-cloud-refuse-rorp9-1259571119.tcb.qcloud.la/A4-2100%C3%972850-code.png?sign=a6d545b037e8dda559619967a9c35ca0&t=1562639389']
+    srcs: ['https://636c-cloud-refuse-rorp9-1259571119.tcb.qcloud.la/A4-2100%C3%972850-code.png?sign=a6d545b037e8dda559619967a9c35ca0&t=1562639389', 'https://636c-cloud-refuse-rorp9-1259571119.tcb.qcloud.la/A4-2100%C3%972850-bgs.png?sign=d7b117e2e8ba9713dae3faab8e200f73&t=1564841112']
   },
 
   /**

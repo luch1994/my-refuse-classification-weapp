@@ -14,3 +14,10 @@ page {
   margin-left: 30rpx;
   font-size: 32rpx;
 }
+
+.search-empty {
+  text-align: center;
+  line-height: 210rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+}

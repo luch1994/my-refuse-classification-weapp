@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-    "m-result-table": "/components/m-result-table/index"
-  },
-  "navigationBarTitleText": "答题比赛"
-}

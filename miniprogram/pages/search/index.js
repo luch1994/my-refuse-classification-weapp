@@ -12,7 +12,8 @@ Page({
     listHeight: 0,
     categories: [],
     trashList: [],
-    resultList: []
+    resultList: [],
+    isShowEmpty: false
   },
 
   /**
@@ -90,10 +91,11 @@ Page({
   onInput(e) {
     let value = e.detail.value;
     if (!value) {
-      if (this.data.resultList.length != 0) {
+      if (this.data.resultList.length != 0 || this.data.isShowEmpty) {
         this.setData({
-          resultList: []
-        })
+          resultList: [],
+          isShowEmpty: false
+        });
       }
       return;
     }
@@ -106,8 +108,13 @@ Page({
       let str = `${item.n}【${categories[c]}】`;
       return str;
     });
+    var isShowEmpty = false;
+    if (resultList.length === 0) {
+      isShowEmpty = true;
+    }
     this.setData({
-      resultList
+      resultList,
+      isShowEmpty
     });
 
   }

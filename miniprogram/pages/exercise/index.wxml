@@ -23,7 +23,7 @@
   <button class="fix-menu-item" open-type="share">
     <image class="fix-menu-img" src="/images/icon-share-oragin.svg" mode="aspectFit"></image>
   </button>
-  <navigator url="./competition" class="fix-menu-item" >
+  <!-- <navigator url="./competition" class="fix-menu-item" >
     <image class="fix-menu-img" src="/images/icon-pk.svg" mode="aspectFit"></image>
-  </navigator>
+  </navigator> -->
 </view>
