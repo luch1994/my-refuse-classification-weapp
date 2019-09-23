@@ -1,0 +1,20 @@
+<!--pages/about/index.wxml-->
+<view class="my-info flex-col flex-center theme">
+  <open-data type="userAvatarUrl" class="head-img"></open-data>
+  <open-data type="userNickName" class="nick-name"></open-data>
+</view>
+
+<view class="cell-box">
+  <van-cell-group>
+    <van-cell title="关于我们" is-link url="./detail"></van-cell>
+    <van-cell title="赞赏作者" is-link url="/pages/mine/admire-code"></van-cell>
+  </van-cell-group>
+</view>
+
+<view class="flex-col download-container">
+  <image class="img" bindtap="onShowLargeImg" src="cloud://cloud-refuse-rorp9.636c-cloud-refuse-rorp9-1259571119/posters/A4-1050x1425.png" mode="widthFix" data-index="0"></image>
+  <button class="btn theme" bindtap="onSave" data-index="0">保存图片</button>
+  <image class="img" bindtap="onShowLargeImg" src="cloud://cloud-refuse-rorp9.636c-cloud-refuse-rorp9-1259571119/posters/A4-1050x1425-bgs.png" mode="widthFix" data-index="1"></image>
+  <button class="btn theme" bindtap="onSave" data-index="1">保存图片</button>
+  <m-fix-menu></m-fix-menu>
+</view>

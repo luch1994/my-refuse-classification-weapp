@@ -1,0 +1,47 @@
+/* pages/exchange/detail.wxss */
+
+page {
+  background-color: #f2f2f2;
+}
+
+.status {
+  padding: 20rpx;
+  background-color: #fff;
+}
+
+.goods {
+  margin-top: 30rpx;
+}
+
+.other-info {
+  margin-top: 30rpx;
+  background-color: #fff;
+}
+
+.row {
+  padding: 20rpx 30rpx;
+  align-items: flex-start;
+}
+
+.label {
+  flex-basis: 160rpx;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.value {
+  flex: 1;
+  color: #999;
+  padding: 0 10rpx;
+}
+
+.copy {
+  width: 100rpx;
+  height: 40rpx;
+  text-align: center;
+  line-height: 36rpx;
+  border: 2rpx solid #999;
+  color: #999;
+  border-radius: 20rpx;
+  font-size: 22rpx;
+}

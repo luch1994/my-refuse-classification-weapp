@@ -1,0 +1,21 @@
+<!--pages/exchange/detail.wxml-->
+<view class="status {{exchange.is_send ? '': 'oragin'}}">{{statusTxt}}</view>
+<address address="{{exchange.address}}"></address>
+<view class="goods">
+  <goods-row goods="{{goods}}" count="{{exchange.count}}"></goods-row>
+</view>
+<view class="other-info">
+  <view class="row flex-row">
+    <view class="label">兑换时间</view>
+    <view class="value">{{created_time}}</view>
+  </view>
+  <view class="row flex-row">
+    <view class="label">备注</view>
+    <view class="value">{{exchange.remark || ''}}</view>
+  </view>
+  <view class="row flex-row">
+    <view class="label">物流单号</view>
+    <view class="value">{{exchange.logistic_number || ''}}</view>
+    <view class="copy" bindtap="copy">复制</view>
+  </view>
+</view>

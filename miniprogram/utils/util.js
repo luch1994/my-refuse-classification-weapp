@@ -107,11 +107,22 @@ const getTenRandom = function(max) {
   return arr;
 }
 
+/**
+ * 比较两个时间是否是同一天
+ */
+const isTheSameDay = (t1, t2) => {
+  if (!t1 || !t2 || t1.constructor.name !== 'Date' || t2.constructor.name !== 'Date') {
+    return false;
+  }
+  return t1.getFullYear() === t2.getFullYear() && t1.getMonth() === t2.getMonth() && t1.getDate() === t2.getDate();
+}
+
 module.exports = {
   callFunction,
   checkAuth,
   toast,
   formatTime,
   downLoadFile,
-  getTenRandom
+  getTenRandom,
+  isTheSameDay
 }

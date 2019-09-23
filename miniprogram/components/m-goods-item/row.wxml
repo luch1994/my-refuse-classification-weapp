@@ -1,0 +1,12 @@
+<!--pages/components/goods-card/row.wxml-->
+<view class="goods">
+  <image src="{{goods.img}}" mode="aspectFit" class="goods-img"></image>
+  <view class="goods-info">
+    <view class="goods-name">{{goods.name}}({{goods.spec}})</view>
+    <view class="price-box">
+      <image class="gold-icon" src="/images/icon-gold.svg"></image>
+      <text>{{goods.price}}</text>
+    </view>
+  </view>
+  <view class="goods-count">x{{count}}</view>
+</view>

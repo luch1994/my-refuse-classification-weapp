@@ -1,0 +1,101 @@
+/* miniprogram/pages/mall/goods/detail.wxss */
+
+.banner {
+  width: 100%;
+  height: 750rpx;
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+}
+
+.info {
+  padding: 30rpx;
+  align-items: flex-start;
+  font-size: 32rpx;
+}
+
+.name {
+  margin-bottom: 20rpx;
+}
+
+.gold-icon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 8rpx;
+}
+
+.share-btn {
+  width: 70rpx;
+  height: 70rpx;
+  margin-left: 30rpx;
+  flex-basis: 70rpx;
+  flex-grow: 0;
+  flex-shrink: 0;
+  padding: 10rpx;
+}
+
+.share-icon {
+  width: 100%;
+  height: 100%;
+}
+
+.detail {
+  width: 100%;
+}
+
+.bottom-tip {
+  margin-bottom: 100rpx;
+  background-color: #fff;
+}
+
+.bottom-fn {
+  position: fixed;
+  width: 100%;
+  height: 100rpx;
+  left: 0;
+  bottom: 0;
+  border-top: 2rpx solid #ddd;
+  background-color: #fff;
+}
+
+.bottom-icon {
+  flex-basis: 150rpx;
+  height: 100%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  padding: 20rpx;
+}
+
+.bottom-icon image {
+  width: 100%;
+  height: 100%;
+}
+
+.exchange-btn {
+  text-align: center;
+  line-height: 98rpx;
+}
+
+.action-box {
+  padding: 50rpx 30rpx;
+}
+
+.spec-item {
+  padding: 8rpx 16rpx;
+  border: 2rpx solid #ddd;
+  float: left;
+  margin-top: 20rpx;
+  margin-right: 20rpx;
+}
+
+.spec-item.selected {
+  border-color: #1296db;
+  color: #1296db;
+}
+
+.count-box {
+  text-align: right;
+  margin-top: 40rpx;
+}

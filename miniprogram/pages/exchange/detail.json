@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "address": "../../components/address/index",
+    "goods-row": "../../components/m-goods-item/row"
+  },
+  "navigationBarTitleText": "兑换详情"
+}

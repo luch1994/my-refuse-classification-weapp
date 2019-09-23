@@ -1,0 +1,52 @@
+/* pages/components/goods-card/row.wxss */
+
+.goods {
+  display: flex;
+  width: 100%;
+  height: 200rpx;
+  padding: 20rpx 30rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.goods-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+  margin-left: 16rpx;
+}
+
+.goods-img {
+  width: 160rpx;
+  height: 160rpx;
+  flex-basis: 160rpx;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.goods-name {
+  font-size: 26rpx;
+}
+
+.price-box {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  padding: 0 25rpx;
+  margin-top: 10rpx;
+}
+
+.gold-icon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 8rpx;
+}
+
+.goods-count {
+  flex-basis: 100rpx;
+  flex-grow: 0;
+  flex-shrink: 0;
+  text-align: right;
+  line-height: 160rpx;
+}

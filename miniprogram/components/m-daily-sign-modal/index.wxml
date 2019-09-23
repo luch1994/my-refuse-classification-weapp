@@ -1,0 +1,5 @@
+<!--components/m-daily-sign-modal/index.wxml-->
+<van-popup show="{{show}}" bind:close="onClose">
+  <view class="btn sign-btn"></view>
+  <view class="btn db-sign-btn"></view>
+</van-popup>

@@ -1,0 +1,37 @@
+<!--pages/mine/index.wxml-->
+<view class="my-info-box flex-row">
+  <view class="flex-row my-info flex1">
+    <open-data type="userAvatarUrl" class="head-img"></open-data>
+    <open-data type="userNickName" class="nick-name"></open-data>
+  </view>
+  <view class="daily-sign-btn {{hasDailySign ? 'theme-gray' : 'theme' }}" bindtap="onSign">{{hasDailySign ? '已签到': '点击签到'}}</view>
+</view>
+<view class="menu flex-row">
+  <!-- <view class="flex-col menu-item">
+    <text class="value">{{user.energy}}</text>
+    <text class="label">体力</text>
+  </view> -->
+  <navigator hover-class="none" url="../score/list" class="flex-col menu-item">
+    <text class="value">{{user.score - user.usedScore}}</text>
+    <text class="label">积分</text>
+  </navigator>
+  <navigator hover-class="none" url="../exchange/list" class="flex-col menu-item">
+    <text class="value">{{user.exchangedGoodsCount}}</text>
+    <text class="label">已兑换</text>
+  </navigator>
+  <!-- <view class="flex-col menu-item">
+    <text class="value">答题</text>
+    <text class="label">赚积分</text>
+  </view> -->
+
+</view>
+<m-goods-item wx:for="{{goodsList}}" goods="{{item}}" wx:key="{{index}}" bind:select="onSelectGoods"></m-goods-item>
+<van-popup show="{{isShowSignBox}}" custom-style="border-radius: 10rpx;" bind:close="onSignBoxClose">
+  <view class="pop-box">
+    <button class="sign-btn theme" style="height: 100rpx;" bindtap="onSignTap">签到</button>
+    <button class="sign-btn theme" open-type="share" data-is-daily-sign>
+      <text>双倍签到</text>
+      <image src="/images/icon-share-white.svg" class="icon-video" mode="aspectFit"></image>
+    </button>
+  </view>
+</van-popup>

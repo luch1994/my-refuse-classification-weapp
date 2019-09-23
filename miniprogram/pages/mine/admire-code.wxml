@@ -1,0 +1,5 @@
+<!--pages/mine/admire-code.wxml-->
+<view class="container flex-col flex-center">
+  <image class="code" mode="widthFix" src="cloud://cloud-refuse-rorp9.636c-cloud-refuse-rorp9-1259571119/admire-code.png" bindtap="onShowLargeImg"></image>
+  <view class="bottom-tip">点击图片，长按识别即可赞赏作者</view>
+</view>

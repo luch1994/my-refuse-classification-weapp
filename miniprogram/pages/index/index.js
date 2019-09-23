@@ -29,10 +29,6 @@ Page({
             let obj = {};
             obj[key] = data;
             this.setData(obj);
-            // this.data.trashData[i].data = data;
-            // this.setData({
-            //   trashData: this.data.trashData
-            // });
           })
         })(i);
       }
@@ -90,8 +86,11 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function() {
+    let app = getApp();
+    let upper_id = app.globalData.user._openid || '';
     return {
-      title: `垃圾分类小帮手，分的清清楚楚`
+      title: `垃圾分类小帮手`,
+      path: `/pages/index/index?upper_id=${upper_id}`
     }
   },
 

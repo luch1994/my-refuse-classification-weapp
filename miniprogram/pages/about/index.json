@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "m-fix-menu": "/components/m-fix-menu/index",
+    "van-cell-group": "/plugins/vant-weapp/cell-group/index",
+    "van-cell": "/plugins/vant-weapp/cell/index"
+  },
+  "navigationBarTitleText": "关于我们"
+}

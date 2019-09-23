@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "exchange": "../../components/m-exchange/item"
+  },
+  "navigationBarTitleText": "兑换记录"
+}

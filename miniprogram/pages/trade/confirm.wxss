@@ -1,0 +1,74 @@
+/* miniprogram/pages/mall/trade/confirm.wxss */
+
+page {
+  background-color: #f2f2f2;
+}
+
+.address {
+  height: 200rpx;
+  background-color: #fff;
+  margin-bottom: 30rpx;
+}
+
+.empty-address {
+  width: 100%;
+  font-size: 32rpx;
+  color: #ddd;
+  text-align: center;
+  line-height: 200rpx;
+}
+
+.address-arrow {
+  flex-basis: 100rpx;
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 100rpx;
+  height: 100%;
+  padding: 35rpx;
+}
+
+.address-arrow image {
+  width: 100%;
+  height: 100%;
+}
+
+.remark {
+  width: 100%;
+  height: 240rpx;
+  padding: 20rpx 30rpx;
+  background-color: #fff;
+  margin-top: 30rpx;
+}
+
+.remark textarea {
+  width: 100%;
+  height: 100%;
+}
+
+.gold-icon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 8rpx;
+}
+
+.bottom {
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: #fff;
+  align-items: center;
+  padding-left: 30rpx;
+}
+
+.confirm-btn {
+  width: 240rpx;
+  flex-basis: 240rpx;
+  flex-grow: 0;
+  flex-shrink: 0;
+  height: 100%;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 32rpx;
+}

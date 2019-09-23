@@ -79,8 +79,10 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function() {
+    let upper_id = app.globalData.user._openid || '';
     return {
-      title: `垃圾分类还不会？快来这里查一查`
+      title: `垃圾分类还不会？快来这里查一查`,
+      path: `/pages/search/index?upper_id=${upper_id}`
     }
   },
 

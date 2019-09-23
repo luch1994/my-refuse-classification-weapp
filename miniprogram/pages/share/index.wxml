@@ -1,8 +1,8 @@
 <!--pages/share/index.wxml-->
 <view class="flex-col container">
-  <image class="img" bindtap="showLargeImg" src="cloud://cloud-refuse-rorp9.636c-cloud-refuse-rorp9/A4-1050×1425-code.png" mode="widthFix" data-index="0" ></image>
+  <image class="img" bindtap="showLargeImg" src="cloud://cloud-refuse-rorp9.636c-cloud-refuse-rorp9-1259571119/posters/A4-1050x1425.png" mode="widthFix" data-index="0" ></image>
   <button class="btn theme" bindtap="onSave" data-index="0">保存图片</button>
-  <image class="img" bindtap="showLargeImg" src="cloud://cloud-refuse-rorp9.636c-cloud-refuse-rorp9-1259571119/A4-1050x1425-bgs.png" mode="widthFix" data-index="1" ></image>
+  <image class="img" bindtap="showLargeImg" src="cloud://cloud-refuse-rorp9.636c-cloud-refuse-rorp9-1259571119/posters/A4-1050x1425-bgs.png" mode="widthFix" data-index="1" ></image>
   <button class="btn theme" bindtap="onSave" data-index="1">保存图片</button>
   <m-fix-menu></m-fix-menu>
 </view>

@@ -1,0 +1,6 @@
+<!--components/m-goods-item/index.wxml-->
+<view class="box">
+  <image src="{{src}}" class="img" mode="aspectFit" bindtap="onTap"></image>
+  <text class="name">{{goods.name}}</text>
+  <text class="price">{{goods.price}}积分</text>
+</view>

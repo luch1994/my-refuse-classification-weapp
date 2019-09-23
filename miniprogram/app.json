@@ -4,7 +4,17 @@
     "pages/search/index",
     "pages/trash/index",
     "pages/exercise/index",
-    "pages/share/index"
+    "pages/exercise/exam",
+    "pages/share/index",
+    "pages/mine/index",
+    "pages/mine/admire-code",
+    "pages/score/list",
+    "pages/goods/detail",
+    "pages/trade/confirm",
+    "pages/exchange/list",
+    "pages/exchange/detail",
+    "pages/about/index",
+    "pages/about/detail"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -29,10 +39,16 @@
         "selectedIconPath": "/images/icon-exercise-theme.png"
       },
       {
-        "pagePath": "pages/share/index",
-        "text": "分享",
-        "iconPath": "/images/icon-share.png",
-        "selectedIconPath": "/images/icon-share-theme.png"
+        "pagePath": "pages/mine/index",
+        "text": "个人中心",
+        "iconPath": "/images/icon-mine.png",
+        "selectedIconPath": "/images/icon-mine-theme.png"
+      },
+      {
+        "pagePath": "pages/about/index",
+        "text": "关于",
+        "iconPath": "/images/icon-about.png",
+        "selectedIconPath": "/images/icon-about-theme.png"
       }
     ]
   },

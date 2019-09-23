@@ -1,0 +1,9 @@
+/* pages/mine/admire-code.wxss */
+
+.container {
+  width: 100%;
+}
+
+.code {
+  width: 680rpx;
+}

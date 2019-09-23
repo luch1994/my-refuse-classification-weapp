@@ -1,0 +1,33 @@
+/* pages/score/list.wxss */
+
+.my-info {
+  height: 280rpx;
+  /* background: linear-gradient(to top right, rgba(0, 0, 255, 0.5), rgba(255, 0, 0, 0.75)), linear-gradient(rgba(0, 0, 255, 0.25) 100%, transparent); */
+  background: linear-gradient(to top right, #1296db, #fff),
+                linear-gradient(#1296db 100%, transparent);
+  color: #fff;
+}
+
+.head-img {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 10rpx;
+}
+
+.list {
+  padding: 0 30rpx;
+}
+
+.item {
+  height: 140rpx;
+  border-bottom: 2rpx solid #ddd;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20rpx;
+}
+
+.remark {
+  margin-bottom: 10rpx;
+}

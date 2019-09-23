@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "m-goods-item": "/components/m-goods-item/index",
+    "van-popup": "/plugins/vant-weapp/popup/index"
+  },
+  "navigationBarTitleText": "个人中心"
+}

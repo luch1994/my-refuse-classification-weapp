@@ -109,10 +109,15 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function() {
+    let app = getApp();
+    let upper_id = '';
+    if (app.globalData.user) {
+      upper_id = app.globalData.user._id;
+    }
     return {
       title: `测试垃圾分类你能得几分`,
-      path: `/pages/exercise/index`
-    }
+      path: `/pages/exercise/index?upper_id=${upper_id}`
+    };
   },
 
   onSelect: function(e) {

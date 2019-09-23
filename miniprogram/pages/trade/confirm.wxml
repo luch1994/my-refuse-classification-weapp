@@ -1,0 +1,27 @@
+<!--miniprogram/pages/mall/trade/confirm.wxml-->
+<view class="flex-row address" bindtap="onChooseAddress">
+  <view class="flex1">
+    <block wx:if="{{address}}">
+      <address address="{{address}}"></address>
+    </block>
+    <block wx:else>
+      <view class="empty-address">请选择地址</view>
+    </block>
+  </view>
+  <view class="address-arrow">
+    <image src="/images/icon-right-arrow.svg" mode="aspectFit"></image>
+  </view>
+</view>
+<goods-row goods="{{goods}}" count="{{goodsCount}}"></goods-row>
+<view class="remark">
+  <textarea placeholder="备注" bindinput="remarkInput"></textarea>
+</view>
+<view class="bottom flex-row">
+  <view class="flex1">
+    <text>应付：</text>
+    <!-- <image src="/images/icon-gold.svg" class="gold-icon" ></image> -->
+    <text>{{payTotal}}</text>
+    <text>积分</text>
+  </view>
+  <view class="confirm-btn theme" bindtap="onConfirm">确定</view>
+</view>

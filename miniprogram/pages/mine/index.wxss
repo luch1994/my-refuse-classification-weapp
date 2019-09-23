@@ -1,0 +1,85 @@
+/* pages/mine/index.wxss */
+
+page {
+  box-sizing: border-box;
+  padding: 0 50rpx;
+}
+
+.my-info-box {
+  height: 200rpx;
+  border-bottom: 2rpx solid #f7f7f7;
+  align-items: center;
+}
+
+.my-info {
+  align-items: center;
+}
+
+.head-img {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 20rpx;
+  flex-basis: 120rpx;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.daily-sign-btn {
+  width: 200rpx;
+  height: 60rpx;
+  border-radius: 30rpx;
+  text-align: center;
+  line-height: 60rpx;
+  flex-basis: 200rpx;
+  flex-grow: 0;
+  flex-shrink: 0;
+  font-size: 26rpx;
+}
+
+.menu {
+  justify-content: space-evenly;
+  align-items: center;
+  height: 140rpx;
+  border-bottom: 2rpx solid #f7f7f7;
+  margin-bottom: 40rpx;
+}
+
+.menu-item {
+  flex: 1;
+  align-items: center;
+}
+
+.value {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10rpx;
+}
+
+.label {
+  font-size: 20rpx;
+  color: #999;
+}
+
+.pop-box {
+  padding: 40rpx 60rpx;
+  border-radius: 10rpx;
+}
+
+.sign-btn {
+  width: 400rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 28rpx;
+  margin: 30rpx 0;
+  border-radius: 10rpx;
+}
+
+.icon-video {
+  width: 60rpx;
+  height: 60rpx;
+}

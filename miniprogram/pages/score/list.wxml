@@ -1,0 +1,20 @@
+<!--pages/score/list.wxml-->
+<view class="my-info flex-col flex-center">
+  <open-data type="userAvatarUrl" class="head-img"></open-data>
+  <view>积分余额：{{leftScore}}</view>
+</view>
+<view class="list">
+  <view class="item flex-row" wx:for="{{scoreList}}" wx:key="{{index}}">
+    <view class="flex-col">
+      <view class="remark">{{item.remark}}</view>
+      <view>{{item.time}}</view>
+    </view>
+    <block wx:if="{{item.score >= 0}}">
+      <view class="oragin">+{{item.score}}</view>
+    </block>
+    <block wx:else>
+      <view class="grey">{{item.score}}</view>
+    </block>
+  </view>
+</view>
+<view class="bottom-tip">到底啦</view>

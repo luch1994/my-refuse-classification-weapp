@@ -1,0 +1,6 @@
+<!--pages/exchange/list.wxml-->
+<view wx:if="{{exchangeList && exchangeList.length > 0}}">
+  <exchange wx:for="{{exchangeList}}" wx:key="{{index}}" exchange="{{item}}" bind:select="onSelect"></exchange>
+  <view class="bottom-tip">到底啦</view>
+</view>
+<view wx:else class="bottom-tip">暂无兑换记录</view>

@@ -21,7 +21,7 @@
 	},
 	"appid": "wx5c571ef8fa00ca91",
 	"projectname": "my-refuse-classification-weapp",
-	"libVersion": "2.7.3",
+	"libVersion": "2.8.1",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
 	"condition": {
@@ -40,13 +40,19 @@
 		"game": {
 			"list": []
 		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
 		"miniprogram": {
-			"current": 0,
+			"current": -1,
 			"list": [
 				{
-					"id": -1,
-					"name": "db guide",
-					"pathName": "pages/databaseGuide/databaseGuide"
+					"id": 0,
+					"name": "首页",
+					"pathName": "pages/index/index",
+					"query": "upper_id= 1af3506e5d8642050237fb0b34af0c5c",
+					"scene": null
 				}
 			]
 		}

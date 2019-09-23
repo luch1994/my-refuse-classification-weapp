@@ -1,0 +1,4 @@
+<!--pages/about/detail.wxml-->
+<view class="container">
+  <view class="item" wx:for="{{notice}}" wx:key="{{index}}">{{item}}</view>
+</view>

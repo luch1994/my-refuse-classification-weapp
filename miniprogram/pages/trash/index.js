@@ -91,9 +91,10 @@ Page({
    */
   onShareAppMessage: function() {
     let r = this.data.trash;
+    let upper_id = app.globalData.user._openid || '';
     return {
       title: `看看这些${r.name}你都记住了吗`,
-      path: `/pages/trash/index?id=${this.data.id}`
+      path: `/pages/trash/index?id=${this.data.id}&upper_id=${upper_id}`
     }
   }
 })

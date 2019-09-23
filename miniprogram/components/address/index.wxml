@@ -1,0 +1,13 @@
+<!--pages/components/address-info/index.wxml-->
+<view class="address-box flex-row " bindtap="onSelect" >
+  <view class="address flex-col flex1">
+    <view class="flex-row info1 bold flex1">
+      <view class="name">{{address.name}}</view>
+      <view>{{address.tel}}</view>
+    </view>
+    <view class="address-detail flex1">{{address.province + address.city + address.district + address.detail}}</view>
+  </view>
+  <view wx:if="{{isShowEdit}}" class="address-edit" catchtap="onEdit">
+    <image src="/images/icon-edit.svg" mode="aspectFit"></image>
+  </view>
+</view>

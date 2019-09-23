@@ -1,0 +1,18 @@
+<!--components/m-exchange/item.wxml-->
+<view class="item" bindtap="onSelect">
+  <view class="info1">
+    <view>{{exchange.created_time}}</view>
+    <view wx:if="{{exchange.is_send}}" class="grey">已发放</view>
+    <view wx:else class="oragin">待发放</view>
+  </view>
+  <view class="goods">
+    <image src="{{exchange.goods_img}}" mode="aspectFit" class="goods-img"></image>
+    <view class="goods-info">
+      <view class="goods-name">{{exchange.goods_name}}({{exchange.goods_spec}})</view>
+      <view class="count-box">
+        x{{exchange.count}}
+      </view>
+    </view>
+    <view class="price-box">{{exchange.goods_price * exchange.count}}积分</view>
+  </view>
+</view>

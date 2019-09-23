@@ -1,0 +1,40 @@
+/* pages/about/index.wxss */
+
+.my-info {
+  height: 280rpx;
+}
+
+.head-img {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 16rpx;
+}
+
+.nick-name {
+  font-size: 28rpx;
+}
+
+.cell-box {
+  width: 680rpx;
+  margin: auto;
+}
+
+.download-container {
+  align-items: center;
+}
+
+.download-container .img {
+  width: 680rpx;
+  border-radius: 10rpx;
+  margin: 40rpx auto;
+}
+
+.download-container .btn {
+  width: 300rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  line-height: 80rpx;
+  margin: 0 auto 40rpx auto;
+}

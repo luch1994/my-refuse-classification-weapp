@@ -1,0 +1,44 @@
+<!--miniprogram/pages/mall/goods/detail.wxml-->
+<view>
+  <swiper class="banner" indicator-dots>
+    <swiper-item wx:for="{{bannerImgs}}" wx:key="{{index}}">
+      <image class="banner-img" src="{{item}}" mode="aspectFit"></image>
+    </swiper-item>
+  </swiper>
+  <view class="flex-row info">
+    <view class="flex1 flex-col">
+      <text class="bold name">{{goods.name}}</text>
+      <view class="flex-row">
+        <image class="gold-icon" src="/images/icon-gold.svg"></image>
+        <text>{{goods.price}}</text>
+      </view>
+    </view>
+    <button class="btn-transparent share-btn" open-type="share">
+      <image class="share-icon" src="/images/icon-share-oragin.svg" mode="aspectFit"></image>
+    </button>
+  </view>
+  <view class="goods-detail">
+    <image class="detail" mode="widthFix" src="{{item}}" wx:for="{{detailImgs}}" wx:key="{{index}}"></image>
+  </view>
+  <view class="bottom-tip">到底啦~</view>
+  <view class="bottom-fn flex-row">
+    <button class="btn-transparent bottom-icon" open-type="contact">
+      <image src="/images/icon-message.svg"></image>
+    </button>
+    <view class="flex1 exchange-btn {{maxCanExchangeCount >= 1 ? 'theme' : 'theme-gray'}}" bindtap="showAction">
+      <block wx:if="{{maxCanExchangeCount >= 1}}">兑换</block>
+      <block wx:else>积分不足</block>
+    </view>
+  </view>
+</view>
+<van-popup show="{{isShowAction}}" position="bottom" bind:close="hideAction">
+  <view class="action-box flex-col">
+    <view class="spec-box">
+      <view class="spec-item {{specIndex === index ? 'selected': ''}}" data-index="{{index}}" bindtap="specTap" wx:for="{{goods.specs}}" wx:key="{{index}}">{{item}}</view>
+    </view>
+    <view class="count-box">
+      <van-stepper max="{{maxCanExchangeCount}}" integer bind:change="onCountChange"></van-stepper>
+    </view>
+  </view>
+  <view class="bottom-btn theme" bindtap="onConfirm">确定</view>
+</van-popup>
